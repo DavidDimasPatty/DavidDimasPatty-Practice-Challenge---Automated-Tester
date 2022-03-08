@@ -35,7 +35,7 @@ form {
     font-size: 22px;
 }
 
-#name, #email, #number, #dropdown {
+#name, #email, #number, #favoriteFruit {
     outline: none;
     width: 100%;
     padding: 7px;
@@ -46,7 +46,7 @@ form {
     box-sizing: border-box;
 }
 
-#dropdown, option {
+#favoriteFruit, option {
     outline: none;
 }
 
@@ -247,7 +247,7 @@ button {
     form {
         font-size: 18px;
     }
-    #name, #email, #number, #dropdown, textarea {
+    #name, #email, #number, #favoriteFruit, textarea {
         font-size: 15px;
     }
     [type="radio"]+label, [type="checkbox"]+label>span {
@@ -269,7 +269,7 @@ button {
     form {
         font-size: 15px;
     }
-    #name, #email, #number, #dropdown, textarea {
+    #name, #email, #number, #favoriteFruit, textarea {
         font-size: 12px;
     }
     [type="radio"]+label, [type="checkbox"]+label>span {

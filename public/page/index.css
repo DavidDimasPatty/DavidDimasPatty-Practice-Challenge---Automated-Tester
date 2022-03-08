@@ -7,6 +7,10 @@ body {
     background-color: lightseagreen;
     box-shadow: none;
    }
+   #username{
+       margin-bottom: 10px;
+   }
+  
 #popupbox{
 margin: 0; 
 margin-left: 40%; 
