@@ -1,87 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-    <body>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="survey.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
         <header>
-          <section class="title-text">
-            <h1 id="Survey">Survey Form</h1>
-          </section>
+            <h1 id="title">Survey Form</h1>
+            <p id="description">Thank You For Taking Your Time To Give Us FeedBack</p>
         </header>
-        
-        <main>
-          <form id="survey-form">
-            <section id="survey-fields">
-              <!-- identification fields -->
-              <label for="name" id="name-label">* Name:</label>
-              <input id="name" type="text" placeholder="enter your name" required>
-              <br>
-              <label for="Email" id="email-label">* Email:</label>
-              <input id="email" type="email" placeholder="enter your email" required>
-              <br>
-              <label for="number" id="number-label">* Age:</label>
-              <input id="number" type="number" placeholder="enter your age" min=1 max=125 required>
-              <br>
-              <!-- Which option best describes your current role -->
-              <label for="dropdown">Which option best describes your current role?</label>
-              <select id="dropdown" form="survey-form">
-                <option value="" disabled selected>select an option</option>
-                <option value="student">Student</option>
-                <option value="full-time-job">Full time job</option>
-                <option value="full-time-learner">Full time learner</option>
-                <option value="prefer-not">Prefer not to say</option>
-                <option value="other">Other</option>
-              </select>
-              <br>
-              <!-- How likely is that you would recommend freeCodeCamp to a friend -->
-              <label for="recommendation">* How likely is that you would recommend freeCodeCamp to a friend?</label>
-              <fieldset id="recommendation">
-                <label for="r_definitely"><input type="radio" name="recommend" id="r_definitely" value="definitely" required>Definitely</label>
-                <label for="r_maybe"><input type="radio" name="recommend" id="r_maybe" value="maybe" required>Maybe</label>
-                <label for="r_not_sure"><input type="radio" name="recommend" id="r_not_sure" value="notsure" required>Not sure</label>
-              </fieldset>
-              <br>
-              <!-- What do you like most in FCC -->
-              <label for="likethemost">What do you like most in FCC:</label>
-              <select id="likethemost">
-                <option value="" disabled selected>select an option</option>
-                <option value="challenges">Challenges</option>
-                <option value="projects">Projects</option>
-                <option value="community">Community</option>
-                <option value="open-source">Open Source</option>
-              </select>
-              <br>
-              <!-- Things that should be improved in the future -->
-              <label for="improvements">Things that should be improved in the future:</label>
-              <fieldset id="improvements">
-                <legend>(<em>Check all that apply</em>)</legend>
-                <label for="c-fep"><input type="checkbox" name="improve-checks" id="c-fep" value="fep">Front-end Projects</label>
-                <label for="c-bep"><input type="checkbox" name="improve-checks" id="c-bep" value="bep">Back-end Projects</label>
-                <label for="c-datav"><input type="checkbox" name="improve-checks" id="c-datav" value="datav">Data Visualization</label>
-                <label for="c-chlgs"><input type="checkbox" name="improve-checks" id="c-chlgs" value="chlgs">Challenges</label>
-                <label for="c-osc"><input type="checkbox" name="improve-checks" id="c-osc" value="osc">Open Source Community</label>
-                <label for="c-ghr"><input type="checkbox" name="improve-checks" id="c-ghr" value="ghr">Gitter help rooms</label>
-                <label for="c-vid"><input type="checkbox" name="improve-checks" id="c-vid" value="vid">Videos</label>
-                <label for="c-meet"><input type="checkbox" name="improve-checks" id="c-meet" value="meet">City Meetups</label>
-                <label for="c-wiki"><input type="checkbox" name="improve-checks" id="c-wiki" value="wiki">Wiki</label>
-                <label for="c-forum"><input type="checkbox" name="improve-checks" id="c-forum" value="forum">
-      Forum</label>
-                <label for="c-addcours"><input type="checkbox" name="improve-checks" id="c-addcours" value="addcours">Additional Courses</label>
-              </fieldset>
-              <br>
-              <!-- Any Comments or Suggestions -->
-              <label for="comments">Any Comments or Suggestions?</label>
-              <textarea style="height:50px;resize:vertical;" id="comments" placeholder="enter a comment"></textarea>
-            </section>
-            <br>
-            <!-- submit -->
-            <button id="submit">submit</button>
-          </form>
-        </main>
-       
-      </body>
+        <form id="survey-form">
 
+            <div class="form-group">
+                <label for="name" id="name-label">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email" id="email-label">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="age" id="number-label">Age</label>
+                <input type="number" name="age" id="number" min="1" max="99" placeholder="Enter Your Age">
+            </div>
 
+            <div class="form-group">
+                <label for="occupation">Choose A Role That Best Describes You</label>
+                <select name="occupation" id="dropdown">
+                    <option selected disabled value>Select Your Role</option>
+                    <option value="student">Student</option>
+                    <option value="full-time-job">Full Time Job</option>
+                    <option value="part-time-job">Part Time Job</option>
+                    <option value="prefer-to-not-say">Prefer Not To Say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
 
+            <div class="form-group">
+                <label for="rating">Would You Recommend Our Product To A Friend ?</label>
+                <div class="radio-group">
+                    <input type="radio" name="rating" id="never" value="never"><label for="never"> Never </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="rating" id="maybe" value="maybe"><label for="maybe"> Maybe </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="rating" id="likely" value="likely"><label for="likely"> Likely </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="rating" id="definitely" value="definitely"><label for="definitely">
+                        Definitely
+                    </label>
+                </div>
+            </div>
 
+            <div class="form-group">
+                <label for="liked">Select Things That You Liked About Our Product</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="liked" id="ui" value="ui"><label for="ui">
+                        <svg class="check-mark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                            <polyline class="check-mark-svg-path" points="25.5,53.5 39.5,67.5 72.5,34.5 " />
+                        </svg>
+                        <span>UI</span>
+                    </label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="liked" id="features" value="features"><label for="features">
+                        <svg class="check-mark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                            <polyline class="check-mark-svg-path" points="25.5,53.5 39.5,67.5 72.5,34.5 " />
+                        </svg>
+                        <span>Features</span>
+                    </label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="liked" id="service" value="service"><label for="service">
+                        <svg class="check-mark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                            <polyline class="check-mark-svg-path" points="25.5,53.5 39.5,67.5 72.5,34.5 " />
+                        </svg>
+                        <span>Service</span>
+                    </label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="liked" id="simpleness" value="simpleness"><label for="simpleness">
+                        <svg class="check-mark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                            <polyline class="check-mark-svg-path" points="25.5,53.5 39.5,67.5 72.5,34.5 " />
+                        </svg>
+
+                        <span>Simpleness</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="remark">Remarks</label>
+                <textarea name="remark" id="remark" placeholder="Tell Us How Can We Improve.."></textarea>
+            </div>
+
+            <div class="form-group">
+                <button id="submit" type="submit">Submit</button>
+            </div>
+        </form>
+    </main>
+</body>
 
 </html>
