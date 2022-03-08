@@ -1,1 +1,1 @@
-# DavidDimasPatty-Practice-Challenge---Automated-Tester
+Practice-Challenge---Automated-Tester
