@@ -1,0 +1,27 @@
+{
+  "name": "practice-challenge---automated-tester",
+  "version": "1.0.0",
+  "description": "Practice-Challenge---Automated-Tester",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidDimasPatty/Practice-Challenge---Automated-Tester.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidDimasPatty/Practice-Challenge---Automated-Tester/issues"
+  },
+  "homepage": "https://github.com/DavidDimasPatty/Practice-Challenge---Automated-Tester#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

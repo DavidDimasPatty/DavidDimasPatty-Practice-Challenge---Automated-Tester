@@ -1,0 +1,10 @@
+const express= require("express");
+const cors = require('cors');
+const ruter=require("./public/router.js");
+const PORT = process.env.PORT || 8080
+const app=express();
+
+app.use(cors());
+app.use('/',ruter);
+app.set('trust proxy', 1)
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
