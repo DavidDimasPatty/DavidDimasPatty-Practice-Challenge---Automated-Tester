@@ -1,5 +1,5 @@
 FROM node:12
-WORKDIR mkdir /app
+RUN mkdir /app
 ADD . /app
 WORKDIR /app
 RUN npm update

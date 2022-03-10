@@ -1,16 +1,18 @@
 const express=require("express");
 const router=express.Router();
 const path = require('path');
+var basicAuth = require('express-basic-auth');
 
-router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'page/index.html'));
-  })
+router.use(basicAuth({
+  challenge: true,
+  users:{'topcoder':'rocks'}
+}))
 
-router.get('/success', (req, res) => {
+router.get('/survey', (req, res) => {
     res.sendFile(path.join(__dirname, 'page/success.html'));
   })
 
-router.get('/survey', (req, res) => {
+router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'page/survey.html'));
 })
 
