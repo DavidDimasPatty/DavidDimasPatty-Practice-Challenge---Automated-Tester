@@ -8,7 +8,7 @@ router.use(basicAuth({
   users:{'topcoder':'rocks'}
 }))
 
-router.get('/survey', (req, res) => {
+router.post('/survey', (req, res) => {
     res.sendFile(path.join(__dirname, 'page/success.html'));
   })
 
